@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    # URL di connessione al database MySQL. Specifica il protocollo JDBC, il server (localhost),
+    # la porta predefinita di MySQL (3306) e il nome del database (authsystem).
+    url: jdbc:mysql://localhost:3306/authsystem
+    # Username per accedere al database MySQL.
+    username: root
+    # Password per accedere al database MySQL.
+    password: "password"
+    # Specifica il driver JDBC da utilizzare per la connessione a MySQL.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+server:
+  # Specifica la porta su cui l'applicazione Spring Boot sarà in ascolto.
+  # Il valore predefinito è 8080, ma qui viene cambiato a 8025.
+  port: 8025
+
+
+
+
