@@ -53,6 +53,7 @@ public class UtenteService {
         utente.setNome(request.nome());
         utente.setCognome(request.cognome());
         utente.setEmail(request.email());
+        utente.setPassword(passwordEncoder.encode(request.password()));
         utenteRepository.save(utente);
         return new EntityIdResponse(utente.getId());
     }
